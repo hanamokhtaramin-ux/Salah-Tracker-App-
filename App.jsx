@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+/* globals loaded from CDN: React, ReactDOM */
+const { useState, useEffect, useRef } = React;
 
 /* =========================================================================
    My Prayer & Me  -  mobile-first prayer tracking PWA
@@ -734,7 +735,7 @@ function multiplierFor(streak) {
 
 /* ============================== MAIN APP =============================== */
 
-export default function App() {
+function App() {
   /* today mapped to DAYS index (date 2026-05-30 is Saturday -> index 5) */
   const mappedToday = 5;
 
@@ -1649,3 +1650,5 @@ function BottomNav({ screen, setScreen }) {
     </div>
   );
 }
+
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));

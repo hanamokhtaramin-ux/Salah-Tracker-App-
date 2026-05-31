@@ -12,10 +12,33 @@
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { height: 100%; background: #f4f0e8; font-family: Georgia, serif; }
       #root { min-height: 100vh; }
+      #loading {
+        display: flex; flex-direction: column; align-items: center;
+        justify-content: center; height: 100vh;
+        color: #3d6b4a; font-family: Georgia, serif; gap: 14px;
+      }
     </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root">
+      <div id="loading">
+        <svg width="48" height="48" viewBox="0 0 200 200">
+          <path d="M92,182 C90,150 90,135 94,120 L106,120 C110,135 110,150 108,182 Z" fill="#9c6b3e"/>
+          <path d="M100,124 C92,108 80,98 70,90" stroke="#9c6b3e" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M100,124 C108,108 120,98 130,90" stroke="#9c6b3e" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="100" cy="80" r="40" fill="#4caf7d" opacity="0.85"/>
+        </svg>
+        <span style="font-size:16px; color:#5a9e6f;">Loading My Prayer &amp; Me...</span>
+      </div>
+    </div>
+
+    <!-- React 18 + ReactDOM from CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel standalone for JSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone@7.27.3/babel.min.js"></script>
+
+    <!-- App -->
+    <script type="text/babel" src="./App.jsx" data-presets="react"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "../App.jsx";
+/*
+  This file is not used in production.
+  The app runs via CDN + Babel standalone — see index.html.
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  For local development, serve the repo root with any static server:
+    npx serve .
+    python3 -m http.server 8080
+  Then open http://localhost:8080
+*/
